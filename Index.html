@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self-Service Kiosk</title>
+</head>
+<body>
+	<h1>Welcome to ARAN-VI Self-Service Kiosk</h1>
+	<div class="options">
+		<button onclick="showOrderForm()">Order Food</button>
+		<button onclick="showCheckInForm()">Check In</button>
+		<button onclick="showShoppingMall()">Shopping Mall</button>
+	</div>
+	<div id="form-container"></div>
+	<div id="payment-container"></div>
+	<div id="shopping-mall-container"></div>
+	<script>
+		function showOrderForm() {
+			// code to display the order form
+			const formContainer = document.getElementById("form-container");
+			formContainer.innerHTML = `
+				<form>
+					<input type="text" name="name" placeholder="Name">
+					<input type="email" name="email" placeholder="Email">
+					<input type="tel" name="phone" placeholder="Phone">
+					<button type="submit">Order</button>
+				</form>
+			`;
+		}
+		
+		function showCheckInForm() {
+			// code to display the check-in form
+			const formContainer = document.getElementById("form-container");
+			formContainer.innerHTML = `
+				<form>
+					<input type="text" name="name" placeholder="Name">
+					<input type="email" name="email" placeholder="Email">
+					<button type="submit">Check In</button>
+				</form>
+			`;
+		}
+		
+		function showShoppingMall() {
+			// code to display the shopping mall directory
+			const shoppingMallContainer = document.getElementById("shopping-mall-container");
+			shoppingMallContainer.innerHTML = `
+				<h2>Shopping Mall Directory</h2>
+				<ul>
+					<li>Store 1</li>
+					<li>Store 2</li>
+					<li>Store 3</li>
+				</ul>
+			`;
+		}
+	</script>
+</body>
+</html>
